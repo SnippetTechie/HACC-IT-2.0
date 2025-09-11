@@ -1,10 +1,35 @@
 .timeline { padding: 80px 16px; }
 .timeline .inner { max-width: 900px; margin: 0 auto; }
-.timeline h2 { font-size: 32px; margin-bottom: 20px; }
+.timeline h2 { 
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 2rem; 
+  font-family: 'Orbitron', 'Exo 2', sans-serif;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #fff;
+  text-shadow: 0 0 14px rgba(215,123,255,0.55), 0 0 30px rgba(138,43,226,0.55);
+  text-align: center;
+}
 .vertical { position: relative; margin-left: 8px; }
 .vertical:before { content: ''; position: absolute; left: 16px; top: 0; bottom: 0; width: 2px; background: rgba(255,255,255,0.08); }
 .step { display: grid; grid-template-columns: 48px 1fr; gap: 14px; position: relative; padding: 12px 0; }
 .marker { width: 32px; height: 32px; display: grid; place-items: center; border-radius: 50%; background: radial-gradient(circle at 30% 30%, var(--neon-pink), var(--neon-purple)); color: #fff; box-shadow: 0 0 18px rgba(215,123,255,0.5); }
-.content h3 { margin-top: 2px; }
-.content p { color: #d6d6de; margin-top: 4px; }
+.content h3 { 
+  margin-top: 2px; 
+  font-family: 'Exo 2', 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  color: #fff;
+}
+.content p { 
+  color: #d6d6de; 
+  margin-top: 6px; 
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0.2px;
+}
 

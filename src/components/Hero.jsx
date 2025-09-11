@@ -4,11 +4,22 @@ import './Hero.css'
 
 export default function Hero() {
   const stars = useMemo(() => (
-    Array.from({ length: 18 }).map((_, i) => ({
+    Array.from({ length: 24 }).map((_, i) => ({
       id: i,
       left: `${Math.random() * 100}%`,
       top: `${Math.random() * 100}%`,
-      delay: 0.4 + (i % 6) * 0.2,
+      delay: 0.4 + (i % 8) * 0.15,
+      size: Math.random() * 3 + 1,
+    }))
+  ), [])
+  
+  const particles = useMemo(() => (
+    Array.from({ length: 12 }).map((_, i) => ({
+      id: i,
+      left: `${Math.random() * 100}%`,
+      top: `${Math.random() * 100}%`,
+      delay: Math.random() * 2,
+      duration: 8 + Math.random() * 12,
     }))
   ), [])
   return (
@@ -19,34 +30,87 @@ export default function Hero() {
         aria-hidden
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 1 }}
+        transition={{ duration: 1.5 }}
       >
+        {/* Enhanced floating orbs */}
         <motion.span
           className="bubble b1"
-          initial={{ x: -40, y: -10 }}
-          animate={{ x: [ -40, -10, -40 ], y: [ -10, 20, -10 ] }}
-          transition={{ duration: 14, repeat: Infinity, ease: 'easeInOut' }}
+          initial={{ x: -60, y: -20, scale: 0.8 }}
+          animate={{ 
+            x: [ -60, -20, -60, -80, -60 ], 
+            y: [ -20, 30, -20, -10, -20 ],
+            scale: [0.8, 1.2, 0.8, 1.0, 0.8]
+          }}
+          transition={{ duration: 20, repeat: Infinity, ease: 'easeInOut' }}
         />
         <motion.span
           className="bubble b2"
-          initial={{ x: 20, y: 10 }}
-          animate={{ x: [ 20, 40, 20 ], y: [ 10, -10, 10 ] }}
-          transition={{ duration: 16, repeat: Infinity, ease: 'easeInOut' }}
+          initial={{ x: 30, y: 15, scale: 0.9 }}
+          animate={{ 
+            x: [ 30, 60, 30, 10, 30 ], 
+            y: [ 15, -20, 15, 25, 15 ],
+            scale: [0.9, 1.3, 0.9, 1.1, 0.9]
+          }}
+          transition={{ duration: 18, repeat: Infinity, ease: 'easeInOut' }}
         />
         <motion.span
           className="bubble b3"
-          initial={{ x: 60, y: -30 }}
-          animate={{ x: [ 60, 30, 60 ], y: [ -30, 0, -30 ] }}
-          transition={{ duration: 18, repeat: Infinity, ease: 'easeInOut' }}
+          initial={{ x: 80, y: -40, scale: 0.7 }}
+          animate={{ 
+            x: [ 80, 40, 80, 100, 80 ], 
+            y: [ -40, 10, -40, -60, -40 ],
+            scale: [0.7, 1.4, 0.7, 1.0, 0.7]
+          }}
+          transition={{ duration: 22, repeat: Infinity, ease: 'easeInOut' }}
         />
-        <motion.ul className="stars" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1.2 }}>
+        
+        {/* Floating particles */}
+        <motion.div className="floating-particles">
+          {particles.map(p => (
+            <motion.span
+              key={p.id}
+              className="particle"
+              style={{ left: p.left, top: p.top }}
+              initial={{ scale: 0, opacity: 0 }}
+              animate={{ 
+                scale: [0, 1, 0.8, 1.2, 0],
+                opacity: [0, 0.6, 0.3, 0.8, 0],
+                y: [0, -20, -40, -60, -80]
+              }}
+              transition={{ 
+                duration: p.duration, 
+                repeat: Infinity, 
+                ease: 'easeInOut', 
+                delay: p.delay 
+              }}
+            />
+          ))}
+        </motion.div>
+        
+        {/* Enhanced twinkling stars */}
+        <motion.ul className="stars" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1.8 }}>
           {stars.map(s => (
             <motion.li
               key={s.id}
-              style={{ left: s.left, top: s.top }}
-              initial={{ scale: 0.4, opacity: 0.3 }}
-              animate={{ scale: [0.6, 1, 0.6], opacity: [0.2, 0.55, 0.2] }}
-              transition={{ duration: 3.6, repeat: Infinity, ease: 'easeInOut', delay: s.delay }}
+              className="star"
+              style={{ 
+                left: s.left, 
+                top: s.top,
+                width: `${s.size}px`,
+                height: `${s.size}px`
+              }}
+              initial={{ scale: 0, opacity: 0, rotate: 0 }}
+              animate={{ 
+                scale: [0, 1.2, 0.8, 1.5, 0.8],
+                opacity: [0, 0.8, 0.4, 1, 0.4],
+                rotate: [0, 180, 360]
+              }}
+              transition={{ 
+                duration: 4 + Math.random() * 2, 
+                repeat: Infinity, 
+                ease: 'easeInOut', 
+                delay: s.delay 
+              }}
             />
           ))}
         </motion.ul>
@@ -54,9 +118,32 @@ export default function Hero() {
       <motion.div
         className="gradient-shift"
         aria-hidden
-        initial={{ backgroundPosition: '0% 50%' }}
-        animate={{ backgroundPosition: [ '0% 50%', '100% 50%', '0% 50%' ] }}
-        transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
+        initial={{ backgroundPosition: '0% 50%', opacity: 0.3 }}
+        animate={{ 
+          backgroundPosition: [ '0% 50%', '100% 50%', '0% 50%' ],
+          opacity: [0.3, 0.6, 0.3]
+        }}
+        transition={{ duration: 25, repeat: Infinity, ease: 'linear' }}
+      />
+      
+      {/* Additional animated layers */}
+      <motion.div
+        className="wave-layer"
+        aria-hidden
+        initial={{ x: '-100%' }}
+        animate={{ x: '100%' }}
+        transition={{ duration: 30, repeat: Infinity, ease: 'linear' }}
+      />
+      
+      <motion.div
+        className="pulse-layer"
+        aria-hidden
+        initial={{ scale: 0.8, opacity: 0 }}
+        animate={{ 
+          scale: [0.8, 1.2, 0.8],
+          opacity: [0, 0.1, 0]
+        }}
+        transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
       />
       <div className="container">
         <motion.h1

@@ -1,24 +1,58 @@
 .hero { position: relative; min-height: 100svh; display: grid; place-items: center; overflow: hidden; }
 .hero .bg { position: absolute; inset: 0; background: radial-gradient(900px 600px at 20% 20%, rgba(138,43,226,0.22), transparent 60%), radial-gradient(900px 600px at 80% 60%, rgba(215,123,255,0.14), transparent 60%); filter: blur(18px); animation: float 14s ease-in-out infinite alternate; }
 .particles { position: absolute; inset: 0; pointer-events: none; }
-.bubble { position: absolute; width: 220px; height: 220px; border-radius: 50%; filter: blur(22px); opacity: 0.18; }
-.bubble.b1 { left: 5%; top: 12%; background: radial-gradient(circle, rgba(138,43,226,0.8), transparent 60%); }
-.bubble.b2 { right: 12%; top: 20%; background: radial-gradient(circle, rgba(215,123,255,0.8), transparent 60%); }
-.bubble.b3 { left: 45%; bottom: 8%; background: radial-gradient(circle, rgba(255,138,0,0.7), transparent 60%); }
+.bubble { position: absolute; width: 280px; height: 280px; border-radius: 50%; filter: blur(28px); opacity: 0.25; }
+.bubble.b1 { left: 5%; top: 12%; background: radial-gradient(circle, rgba(138,43,226,0.9), transparent 60%); }
+.bubble.b2 { right: 12%; top: 20%; background: radial-gradient(circle, rgba(215,123,255,0.9), transparent 60%); }
+.bubble.b3 { left: 45%; bottom: 8%; background: radial-gradient(circle, rgba(255,138,0,0.8), transparent 60%); }
+
+.floating-particles { position: absolute; inset: 0; }
+.particle { position: absolute; width: 4px; height: 4px; border-radius: 50%; background: rgba(255,255,255,0.8); box-shadow: 0 0 8px rgba(215,123,255,0.7); }
+
 .stars { list-style: none; position: absolute; inset: 0; margin: 0; padding: 0; }
-.stars li { position: absolute; width: 3px; height: 3px; border-radius: 50%; background: rgba(255,255,255,0.9); box-shadow: 0 0 6px rgba(215,123,255,0.6); }
-.gradient-shift { position: absolute; inset: -20% -10% -10% -10%; background: linear-gradient(120deg, rgba(138,43,226,0.08), rgba(215,123,255,0.06)); mix-blend-mode: screen; pointer-events: none; background-size: 200% 200%; }
-/* removed grid/orbits per revert */
+.star { position: absolute; border-radius: 50%; background: rgba(255,255,255,0.9); box-shadow: 0 0 8px rgba(215,123,255,0.7), 0 0 16px rgba(138,43,226,0.5); }
+.gradient-shift { position: absolute; inset: -20% -10% -10% -10%; background: linear-gradient(120deg, rgba(138,43,226,0.12), rgba(215,123,255,0.08)); mix-blend-mode: screen; pointer-events: none; background-size: 200% 200%; }
+
+.wave-layer { position: absolute; inset: 0; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.03), transparent); width: 200%; height: 100%; pointer-events: none; }
+
+.pulse-layer { position: absolute; inset: 0; background: radial-gradient(circle at center, rgba(138,43,226,0.1), transparent 70%); pointer-events: none; }
 @keyframes float { from { transform: translateY(-2%);} to { transform: translateY(2%);} }
 .hero .container { position: relative; text-align: center; padding: 80px 16px; }
 .hero .title {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Orbitron', 'Exo 2', sans-serif;
   font-size: clamp(46px, 8.5vw, 96px);
   line-height: 1.02;
   color: #fff;
-  letter-spacing: 0.6px;
+  letter-spacing: 1.2px;
+  font-weight: 800;
   text-shadow: 0 0 14px rgba(215,123,255,0.55), 0 0 30px rgba(138,43,226,0.55);
+  text-transform: uppercase;
 }
-.hero .subtitle { margin-top: 12px; font-size: clamp(18px, 3vw, 30px); color: #ececf3; font-weight: 600; }
-.hero .organizer { margin-top: 14px; font-size: 16px; color: var(--muted); font-family: 'Inter', system-ui, sans-serif; }
+.hero .subtitle { 
+  margin-top: 12px; 
+  font-size: clamp(18px, 3vw, 30px); 
+  color: #ececf3; 
+  font-weight: 600; 
+  font-family: 'Exo 2', 'Space Grotesk', sans-serif;
+  letter-spacing: 0.8px;
+}
+.hero .organizer { 
+  margin-top: 14px; 
+  font-size: 16px; 
+  color: var(--muted); 
+  font-family: 'JetBrains Mono', 'Inter', monospace;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (max-width: 480px) {
+  .hero .organizer { 
+    font-size: 14px; 
+    letter-spacing: 0.3px;
+  }
+}
 

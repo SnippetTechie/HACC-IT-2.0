@@ -1,5 +1,6 @@
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
+import haccImage from '../assets/Hacc.jpg'
 import './About.css'
 
 export default function About() {
@@ -17,9 +18,7 @@ export default function About() {
         >
           <h2>About</h2>
           <p>
-            HACC-IT 2.0 is a high-energy hackathon where innovators, designers, and developers
-            harness AI to solve real-world challenges. Collaborate, prototype rapidly, and push
-            the boundaries of what’s possible in a vibrant, supportive community.
+            After the success of our first edition, HACC-IT 2.0 returns with bigger ambitions and bolder ideas. This phase is not just about coding. It's about creativity, collaboration and building AI solutions that truly matter. Innovation begins here, where bold minds rise.
           </p>
         </motion.div>
         <motion.div
@@ -28,7 +27,7 @@ export default function About() {
           animate={inView ? { opacity: 1, x: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.1 }}
         >
-          <div className="illustration" aria-hidden />
+          <img src={haccImage} alt="HACC-IT 2.0 event" className="illustration" />
         </motion.div>
       </div>
     </section>
