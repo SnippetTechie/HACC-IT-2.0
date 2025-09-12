@@ -168,7 +168,7 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="organizer"
         >
-          organized by HACATHON AND CODING CLUB – School of C & IT
+          organized by HACATHON AND CODING CLUB
         </motion.p>
       </div>
     </section>
