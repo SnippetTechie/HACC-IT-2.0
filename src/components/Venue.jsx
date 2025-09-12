@@ -9,7 +9,8 @@ export default function Venue() {
           <div className="info">
             <p><strong>Venue:</strong> REVA Rangasthala, SVB Block</p>
             <p><strong>Date:</strong> 24-25th September</p>
-            <p><strong>Duration:</strong> 14 Hours (9 AM - 4 PM)</p>
+            <p><strong>Duration:</strong> 14 Hours </p>
+            <p><strong>Timings:</strong> 9 AM - 4 PM</p>
           </div>
         </div>
       </div>
