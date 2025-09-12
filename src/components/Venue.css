@@ -1,0 +1,26 @@
+.venue { position: relative; padding: 80px 16px; }
+.venue .inner { position: relative; max-width: 1100px; margin: 0 auto; }
+.venue h2 { 
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 2rem; 
+  font-family: 'Orbitron', 'Exo 2', sans-serif;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #fff;
+  text-shadow: 0 0 14px rgba(215,123,255,0.55), 0 0 30px rgba(138,43,226,0.55);
+  text-align: center;
+}
+.venue .content { display: grid; gap: 16px; background: var(--panel); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 16px; transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease; will-change: transform; }
+.venue .content:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(138,43,226,0.20), 0 6px 18px rgba(0,0,0,0.35); border-color: rgba(215,123,255,0.28); }
+.venue .content:focus-within { outline: none; transform: translateY(-2px); box-shadow: 0 12px 30px rgba(138,43,226,0.16), 0 4px 12px rgba(0,0,0,0.3); border-color: rgba(215,123,255,0.24); }
+.venue .info p { 
+  color: #d6d6de; 
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0.2px;
+  font-size: 1.125rem;
+}
+@media (min-width: 900px) { .venue .content { grid-template-columns: 1fr; } }
+
