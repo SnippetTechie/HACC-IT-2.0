@@ -25,7 +25,7 @@ export default function Winners() {
           </motion.div>
         </div>
         <p className="line">Three winning teams will shine. Will yours be one of them?</p>
-        <a className="cta-button" href="https://docs.google.com/forms/d/e/1FAIpQLSdxdf3wdhO4kaYAG_t-T2yFYogI79UrXj-ApxjRx7pwZoLpEw/viewform?usp=sharing&ouid=111204213021402461215" target = "_blank">
+        <a className="cta-button" href="https://bit.ly/3KlIVAj" target = "_blank">
           Register Now
         </a>
       </div>
