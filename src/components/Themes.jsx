@@ -7,8 +7,8 @@ const items = [
   { icon: FaSeedling, title: 'Agriculture', desc: 'Smart farming, yield prediction, and supply chains.' },
   { icon: FaRecycle, title: 'Sustainability', desc: 'Climate action, energy efficiency, waste reduction.' },
   { icon: FaGraduationCap, title: 'Education', desc: 'Personalized learning and assistive tools.' },
-  { icon: FaMoneyCheckAlt, title: 'Fintech', desc: 'Personalized learning and assistive tools.' },
-  { icon: FaLightbulb, title: 'Open Innovation', desc: 'Personalized learning and assistive tools.' },
+  { icon: FaMoneyCheckAlt, title: 'Fintech', desc: 'Applying technology to financial services.' },
+  { icon: FaLightbulb, title: 'Open Innovation', desc: 'Collaborative ideas and solutions.' },
 ]
 
 export default function Themes() {
