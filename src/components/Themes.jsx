@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { FaHeartbeat, FaSeedling, FaRecycle, FaGraduationCap } from 'react-icons/fa'
+import { FaHeartbeat, FaSeedling, FaRecycle, FaGraduationCap, FaMoneyCheckAlt, FaLightbulb } from 'react-icons/fa'
 import './Themes.css'
 
 const items = [
@@ -7,6 +7,8 @@ const items = [
   { icon: FaSeedling, title: 'Agriculture', desc: 'Smart farming, yield prediction, and supply chains.' },
   { icon: FaRecycle, title: 'Sustainability', desc: 'Climate action, energy efficiency, waste reduction.' },
   { icon: FaGraduationCap, title: 'Education', desc: 'Personalized learning and assistive tools.' },
+  { icon: FaMoneyCheckAlt, title: 'Fintech', desc: 'Personalized learning and assistive tools.' },
+  { icon: FaLightbulb, title: 'Open Innovation', desc: 'Personalized learning and assistive tools.' },
 ]
 
 export default function Themes() {
