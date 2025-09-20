@@ -48,12 +48,11 @@ const teams = [
 function Shortlisted() {
   const sortedTeams = [...teams].sort((a, b) => a.name.localeCompare(b.name));
   const waitlistTeams = [
-    'Waitlist Team',
+    'Alchemist',
+    'Ecologic',
     'Hackstorm',
     'Rocket',
     'Roral Minds',
-    'Ecologic',
-    'Alchemist',
   ];
   const sectionRef = useRef(null);
   const confettiPlayed = useRef(false);
