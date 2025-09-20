@@ -7,9 +7,8 @@ const navItems = [
   { href: '#home', label: 'Home' },
   { href: '#about', label: 'About' },
   { href: '#themes', label: 'Themes' },
+  { href: '#shortlisted', label: 'Teams' },
   { href: '#timeline', label: 'Timeline' },
-  { href: '#venue', label: 'Venue' },
-  { href: '#winners', label: 'Winners' },
   { href: '#contact', label: 'Contact' },
 ]
 
