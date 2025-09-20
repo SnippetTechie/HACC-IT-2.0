@@ -1,0 +1,121 @@
+
+
+.shortlisted-section {
+  background: var(--panel);
+  padding: 40px 8px;
+  border-radius: 14px;
+  margin: 2rem 0;
+  box-shadow: 0 8px 32px rgba(138,43,226,0.10);
+  animation: fadeInConfetti 1.8s cubic-bezier(.4,0,.2,1) both;
+  position: relative;
+}
+
+@keyframes fadeInConfetti {
+  0% { opacity: 0; filter: blur(8px); }
+  60% { opacity: 1; filter: blur(0); }
+  100% { opacity: 1; }
+}
+
+.hookup-message {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 2rem;
+  font-family: 'Orbitron', 'Exo 2', sans-serif;
+}
+
+.theme-dropdown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.theme-dropdown label {
+  font-weight: bold;
+  color: var(--muted);
+  margin-right: 0.5rem;
+}
+
+.theme-dropdown select {
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  border: none;
+  font-size: 1rem;
+  background: var(--bg);
+  color: var(--neon-purple);
+  font-weight: bold;
+  box-shadow: 0 2px 8px rgba(138,43,226,0.08);
+}
+
+.team-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  list-style: none;
+  padding: 0;
+}
+
+@media (min-width: 720px) {
+  .team-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.team-card {
+  background: linear-gradient(180deg, rgba(15,15,21,0.9), rgba(7,7,10,0.9));
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 10px;
+  padding: 12px 8px;
+  box-shadow: 0 2px 8px rgba(138,43,226,0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s;
+  font-family: 'Segoe UI', 'Inter', 'Arial', sans-serif;
+  position: relative;
+  min-width: 0;
+}
+
+.small-card {
+  padding: 10px 4px;
+  font-size: 0.95rem;
+}
+
+.team-card:hover {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: 0 12px 40px rgba(138,43,226,0.25), 0 0 0 2px rgba(215,123,255,0.25) inset;
+}
+
+.team-name {
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--neon-purple);
+  margin-bottom: 0.3rem;
+  text-shadow: 0 0 8px rgba(215,123,255,0.12);
+  font-family: 'Segoe UI', 'Inter', 'Arial', sans-serif;
+  text-transform: capitalize;
+}
+
+.team-leader {
+  font-size: 0.92rem;
+  color: var(--muted);
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  font-family: 'Segoe UI', 'Inter', 'Arial', sans-serif;
+}
+
+.waitlist-section {
+  margin-top: 2.5rem;
+}
+.waitlist-title {
+  text-align: center;
+  color: var(--neon-pink);
+  font-family: 'Orbitron', 'Exo 2', sans-serif;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+}
+.waitlist-card {
+  background: linear-gradient(180deg, rgba(15,15,21,0.7), rgba(7,7,10,0.7));
+  border: 1px dashed var(--neon-pink);
+}
