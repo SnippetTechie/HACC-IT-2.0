@@ -2,6 +2,7 @@ import Navbar from './components/Navbar.jsx'
 import Hero from './components/Hero.jsx'
 import About from './components/About.jsx'
 import Themes from './components/Themes.jsx'
+import Shortlisted from './components/Shortlisted.jsx'
 import Timeline from './components/Timeline.jsx'
 import Venue from './components/Venue.jsx'
 import Winners from './components/Winners.jsx'
@@ -15,6 +16,7 @@ function App() {
         <Hero />
         <About />
         <Themes />
+        <Shortlisted />
         <Timeline />
         <Venue />
         <Winners />
