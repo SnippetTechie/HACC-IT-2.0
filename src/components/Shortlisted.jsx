@@ -51,8 +51,8 @@ function Shortlisted() {
     'Alchemist',
     'Ecologic',
     'Hackstorm',
-    'Rocket',
-    'Roral Minds',
+    'Team Rocket',
+    'Rural Minds',
   ];
   const sectionRef = useRef(null);
   const confettiPlayed = useRef(false);
